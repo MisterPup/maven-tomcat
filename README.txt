@@ -2,24 +2,26 @@
 CONFIGURATION
 =============================================
 
-Aggiungere a tomcat-users.xml
+Add user to tomcat-users.xml
 <user username="tomcat" password="tomcat" roles="manager-gui,admin-gui,manager-script"/>
 
-Per non schiantare username e password utilizza "server" come scritto qui
+If you don't want username and password in plain on pom.xml, follow the following guide
 http://tomcat.apache.org/maven-plugin-2.2/tomcat7-maven-plugin/usage.html
 
-~/.m2/settings.xml
+Example of configuration:
+
+File ~/.m2/settings.xml
 <settings>
 	<servers>
 	<server>
 	  <id>tomcat</id>
 	  <username>tomcat</username>
-	  <password>{A3p9n5EloPoHc+ElXPrxGbYjdTd6UEirLXFtzB35KMU=}</password>
+	  <password>ENCRYPTED_PASSWORD</password>
 	</server>
 	</servers>
 </settings>
 
-pom.xml:
+File pom.xml:
 <configuration>
     <server>tomcat</server>
     <url>http://localhost:8080/manager/text</url>

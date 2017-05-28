@@ -9,7 +9,7 @@
 	<packaging>war</packaging>
 
 	<name>maven-tomcat</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Demo project for Maven-Tomcat integration</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
